@@ -5,7 +5,10 @@ import updateUserProfile from "../controllers/user/updateUserProfile.js";
 
 const router = express.Router();
 
-router.route("/profile").get(checkAuth, getUserProfile).patch(checkAuth, updateUserProfile)
+router
+	.route("/profile")
+	.get(checkAuth, getUserProfile)
+	.patch(checkAuth, updateUserProfile)
 
 
 
