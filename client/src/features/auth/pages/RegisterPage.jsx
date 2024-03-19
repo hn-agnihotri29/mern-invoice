@@ -35,7 +35,7 @@ const RegisterPage = () => (
 							alignItems: "center",
 						}}
 					>
-						<FaUserCheck className="auth-svg" />
+						<FaUserCheck  />
 						<Typography variant="h1">Sign Up</Typography>
 					</Box>
 					<StyledDivider />
