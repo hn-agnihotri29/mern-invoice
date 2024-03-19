@@ -8,7 +8,7 @@ const GoogleLogin = () => {
 	};
 	return (
 		<Box sx={{ cursor: "pointer" }} onClick={google}>
-			<FcGoogle className="google-icon" />
+			<FcGoogle />
 		</Box>
 	);
 };
