@@ -12,13 +12,17 @@ import HomePage from "./pages/HomePage";
 import RegisterPage from "./features/auth/pages/RegisterPage";
 import VerifiedPage from "./features/auth/pages/VerifiedPage";
 import LoginPage from "./features/auth/pages/LoginPage";
+import { useSelector } from "react-redux";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   useTitle("MERN Invoice - Home");
+  const { user } = useSelector((state) => state.auth);
 
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
+      {user && <Navbar />}
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
