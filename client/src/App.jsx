@@ -15,6 +15,8 @@ import LoginPage from "./features/auth/pages/LoginPage";
 import { useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
 import ResendEmailTokenPage from "./features/auth/pages/ResendEmailTokenPage";
+import PasswordResetRequestPage from "./features/auth/pages/PasswordResetRequestPage";
+import PasswordResetPage from "./features/auth/pages/PasswordResetPage";
 
 
 const App = () => {
@@ -32,7 +34,14 @@ const App = () => {
 					  <Route path="auth/verify" element={<VerifiedPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="resend" element={<ResendEmailTokenPage />} />
-             
+            <Route
+              path="reset_password_request"
+              element={<PasswordResetRequestPage />}
+					  />
+            <Route
+              path="auth/reset_password"
+              element={<PasswordResetPage />}
+            />
 
             <Route path="*" element={<NotFound />} />
           </Route>
