@@ -1,4 +1,3 @@
-
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import useAuthUser from "../hooks/useAuthUser";
 
