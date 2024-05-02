@@ -27,6 +27,10 @@ import CustomerCreateForm from "./features/customers/pages/CustomerCreateForm";
 import CustomerEditForm from "./features/customers/pages/CustomerEditForm";
 import CustomersPage from "./features/customers/pages/CustomersPage";
 import SingleCustomerPage from "./features/customers/pages/SingleCustomerPage";
+import DocCreateEditForm from "./features/documents/pages/DocCreateEditForm";
+import DocumentsPage from "./features/documents/pages/DocumentsPage";
+import SingleDocumentPage from "./features/documents/pages/SingleDocumentPage";
+
 
 const App = () => {
   useTitle("MERN Invoice - Home");
@@ -57,12 +61,12 @@ const App = () => {
 						element={<AuthRequired allowedRoles={[ROLES.User]} />}
 					>
 						<Route path="dashboard" element={<DashboardPage />} />
-            <Route path="profile" element={<ProfilePage />} />
+            			<Route path="profile" element={<ProfilePage />} />
 						<Route
 							path="edit-profile"
 							element={<EditProfileForm />}
 						/>
-            <Route path="customers" element={<CustomersPage />} />
+            			<Route path="customers" element={<CustomersPage />} />
 						<Route
 							path="create-customer"
 							element={<CustomerCreateForm />}
@@ -74,6 +78,19 @@ const App = () => {
 						<Route
 							path="edit-customer/:custId"
 							element={<CustomerEditForm />}
+						/>
+						<Route path="documents" element={<DocumentsPage />} />
+						<Route
+							path="create-doc"
+							element={<DocCreateEditForm />}
+						/>
+						<Route
+							path="edit-doc/:id"
+							element={<DocCreateEditForm />}
+						/>
+						<Route
+							path="document/:id"
+							element={<SingleDocumentPage />}
 						/>
 					</Route>
 
