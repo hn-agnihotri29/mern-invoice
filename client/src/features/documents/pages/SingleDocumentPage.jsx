@@ -1,12 +1,10 @@
 
-import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
 import EditIcon from "@mui/icons-material/Edit";
 import {
 	Avatar,
 	Box,
 	Button,
-	CircularProgress,
 	Container,
 	CssBaseline,
 	Grid,
@@ -20,7 +18,6 @@ import {
 	TextareaAutosize,
 	Typography,
 } from "@mui/material";
-import axios from "axios";
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { FaUserSecret } from "react-icons/fa";
@@ -49,8 +46,6 @@ const SingleDocumentPage = () => {
 	const [status, setStatus] = useState("");
 	const [totalAmountReceived, setTotalAmountReceived] = useState(0);
 
-	// const [sendEmail, setSendEmail] = useState(false);
-
 	const document = docData?.document;
 	const profile = profileData?.userProfile;
 
@@ -68,22 +63,6 @@ const SingleDocumentPage = () => {
 			setTotalAmountReceived(totalReceived);
 		}
 	}, [document]);
-
-	// const sendPdfEmail = () => {
-	// 	setSendEmail(true);
-
-	// 	axios
-	// 		.post(`/api/v1/document/send-pdf`, {
-	// 			profile,
-	// 			document,
-	// 			status,
-	// 			totalAmountReceived,
-	// 		})
-	// 		.then(() => setSendEmail(false))
-	// 		.catch((error) => {
-	// 			console.log(error);
-	// 		});
-	// };
 
 	return (
 		<Container component="main" maxWidth="md" sx={{ mt: 10 }}>
