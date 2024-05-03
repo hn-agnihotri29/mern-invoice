@@ -33,7 +33,7 @@ To configure your application effectively, create a `.env.example` file at the r
 
 **Access the Application:**
 
-Once you've successfully started the containers, the application should be accessible in your web browser, typically at `http://localhost:3000` (the port may vary depending on your configuration).
+Once you've successfully started the containers, the application should be accessible in your web browser, typically at `http://localhost:8080` (the port may vary depending on your configuration).
 
 **Additional Notes:**
 
